@@ -1,0 +1,9 @@
+<h2>All Messages:</h2>
+
+<% @messages.each do |message| %>
+  <p>Message Name: <a href ="/messages/<%= message.id %>"><%= message.name %></a></p>
+  <p>Message Body: <%= message.body %></p>
+  
+  <%= button_to "Edit Message", {action: "edit", id: message.id}, method: :get %>
+  <%= button_to "Delete Message", {action: "destroy", id: message.id}, method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %> 

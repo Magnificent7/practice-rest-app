@@ -1,0 +1,9 @@
+<%= form_tag "/messages", method: :post do %>
+  <div>
+    Message Name: <input type="text" name="name">
+  </div>
+  <div>
+    Message Body: <input type="text" name="body">
+  </div>
+  <input type="submit" value="Create Message">
+<% end %>
